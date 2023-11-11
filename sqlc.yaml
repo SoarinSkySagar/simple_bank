@@ -1,0 +1,15 @@
+version: "2"
+cloud:
+  project: "<PROJECT_ID>"
+sql:
+- schema: "./db/migration"
+  queries: "./db/query"
+  engine: "postgresql"
+  gen:
+    go: 
+      package: "db"
+      out: "./db/sqlc"
+  database:
+    managed: true
+  rules:
+    - sqlc/db-prepare

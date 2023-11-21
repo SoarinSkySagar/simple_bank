@@ -46,7 +46,7 @@ jobs:
 
 
     - name: Run migrations
-      run: make migrateup
+      run: migrate -path db/migration -database "postgresql://root:admin@localhost:5432/simple_bank?sslmode=disable" -verbose up
 
     - name: Set up Go
       uses: actions/setup-go@v4

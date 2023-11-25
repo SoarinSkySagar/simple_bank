@@ -130,7 +130,7 @@ func requireBodyMatchAccounts(t *testing.T, body *bytes.Buffer, accounts []db.Ac
 	err = json.Unmarshal(data, &gotAccounts)
 	require.NoError(t, err)
 	require.Equal(t, accounts, gotAccounts)
-}
+}		
 
 func TestListAccountAPI(t *testing.T) {
 	// Generate a random list of accounts for testing
